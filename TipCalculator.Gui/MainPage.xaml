@@ -2,8 +2,184 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TipCalculator.Gui.MainPage"
-             Title="CALCULADORA DE PROPINAS">
+             Title="CALCULADORA DE PROPINAS"
+             BackgroundColor="Black">
 
-   
+
+    <ScrollView
+        Padding="16">
+
+        <VerticalStackLayout
+            Margin="24"
+            Spacing="35">
+
+            <Label
+                Text="CALCULADORA DE PROPINAS"
+                FontSize="28"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                TextColor="White"/>
+
+            <Border
+                    Stroke="White"
+                    Padding="20"
+                    Margin="20"
+                    StrokeShape="RoundRectangle 10">
+
+
+                <Grid
+                        RowDefinitions="Auto,Auto,Auto"
+                        ColumnDefinitions="Auto,*"
+                        RowSpacing="20"
+                        ColumnSpacing="10">
+
+                    <Label
+                            Text="Importe de consumo:"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            VerticalOptions="Center"
+                            HorizontalOptions="End"
+                            FontSize="20"
+                            TextColor="White"/>
+
+                    <Entry
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        x:Name="txtImporte"
+                        Placeholder="Digite el importe"
+                        Keyboard="Numeric"
+                        FontSize="18"
+                        TextColor="White"/>
+
+                    <Label
+                        Text="Núm. de personas:"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End"
+                        FontSize="20"
+                        TextColor="White"/>
+
+                    <Entry
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        x:Name="txtPersonas"
+                        Placeholder="Digite el num. de personas"
+                        Keyboard="Numeric"
+                        FontSize="18"
+                        TextColor="White"/>
+
+                    <Label
+                         Text="% de propina:"
+                         Grid.Row="2"
+                         Grid.Column="0"
+                         VerticalOptions="Center"
+                         HorizontalOptions="End"
+                         FontSize="20"
+                         TextColor="White"/>
+
+                    <Entry
+                         Grid.Row="2"
+                         Grid.Column="1"
+                         x:Name="txtPropina"
+                         Placeholder="Digite la propina"
+                         Keyboard="Numeric"
+                         FontSize="18"
+                         TextColor="White"/>
+
+                </Grid>
+
+            </Border>
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="36">
+
+                <Button
+                    Text="CALCULAR"
+                    FontSize="18"
+                    TextColor="White"
+                    BackgroundColor="Red"
+                    Clicked="CalcularClicked"/>
+
+                <Button
+                    Text="LIMPIAR"
+                    FontSize="18"
+                    TextColor="White"
+                    BackgroundColor="Red"
+                    Clicked="LimpiarClicked"/>
+
+            </HorizontalStackLayout>
+
+            <Border
+              Stroke="LightGray"
+              Padding="16">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12"/>
+                </Border.StrokeShape>
+
+                <VerticalStackLayout
+                    Spacing="8">
+
+                    <Label
+                        Text="Importe de la propina:"
+                        FontSize="Small"
+                        TextColor="White"/>
+
+                    <Label
+                        x:Name="lblPropinaTotal"
+                        Text="0.00"
+                        FontSize="Small"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        TextColor="White"/>
+
+                    <Label
+                        Text="Propina por persona:"
+                        FontSize="Small"
+                        TextColor="White"/>
+
+                    <Label
+                        x:Name="lblPropinaPorPersona"
+                        Text="0.00"
+                        FontSize="Small"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        TextColor="White"/>
+
+                    <Label
+                        Text="Importe total:"
+                        FontSize="Small"
+                        TextColor="White"/>
+
+                    <Label
+                        x:Name="lblTotal"
+                        Text="0.00"
+                        FontSize="Small"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        TextColor="White"/>
+
+                    <Label
+                        Text="Importe total por persona:"
+                        FontSize="Small"
+                        TextColor="White"/>
+
+                    <Label
+                        x:Name="lblTotalPorPersona"
+                        Text="0.00"
+                        FontSize="Small"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        TextColor="White"/>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
 
 </ContentPage>
