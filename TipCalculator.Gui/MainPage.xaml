@@ -113,14 +113,15 @@
 
             <Border
               Stroke="LightGray"
-              Padding="16">
+              Padding="8"
+              Margin="8">
 
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="12"/>
                 </Border.StrokeShape>
 
                 <VerticalStackLayout
-                    Spacing="8">
+                    Spacing="3">
 
                     <Label
                         Text="Importe de la propina:"
@@ -132,7 +133,7 @@
                         Text="0.00"
                         FontSize="Small"
                         FontAttributes="Bold"
-                        HorizontalOptions="Center"
+                        HorizontalOptions="End"
                         TextColor="White"/>
 
                     <Label
@@ -145,7 +146,7 @@
                         Text="0.00"
                         FontSize="Small"
                         FontAttributes="Bold"
-                        HorizontalOptions="Center"
+                        HorizontalOptions="End"
                         TextColor="White"/>
 
                     <Label
@@ -158,7 +159,7 @@
                         Text="0.00"
                         FontSize="Small"
                         FontAttributes="Bold"
-                        HorizontalOptions="Center"
+                        HorizontalOptions="End"
                         TextColor="White"/>
 
                     <Label
@@ -171,7 +172,7 @@
                         Text="0.00"
                         FontSize="Small"
                         FontAttributes="Bold"
-                        HorizontalOptions="Center"
+                        HorizontalOptions="End"
                         TextColor="White"/>
 
                 </VerticalStackLayout>
